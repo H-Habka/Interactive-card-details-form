@@ -1,0 +1,6 @@
+.border_at_active_state:focus {
+    background: linear-gradient(#ffffff, #ffffff) padding-box,
+        linear-gradient(to right, hsl(249, 99%, 64%), hsl(278, 94%, 30%))
+            border-box;
+    border: 1px solid transparent;
+}
