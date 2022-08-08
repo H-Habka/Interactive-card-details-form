@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Interactive-card-details-form/static/css/main.6efa339c.css",
-    "main.js": "/Interactive-card-details-form/static/js/main.9e1e6cdd.js",
+    "main.css": "/Interactive-card-details-form/static/css/main.c047f68d.css",
+    "main.js": "/Interactive-card-details-form/static/js/main.4e420724.js",
     "index.html": "/Interactive-card-details-form/index.html",
-    "main.6efa339c.css.map": "/Interactive-card-details-form/static/css/main.6efa339c.css.map",
-    "main.9e1e6cdd.js.map": "/Interactive-card-details-form/static/js/main.9e1e6cdd.js.map"
+    "main.c047f68d.css.map": "/Interactive-card-details-form/static/css/main.c047f68d.css.map",
+    "main.4e420724.js.map": "/Interactive-card-details-form/static/js/main.4e420724.js.map"
   },
   "entrypoints": [
-    "static/css/main.6efa339c.css",
-    "static/js/main.9e1e6cdd.js"
+    "static/css/main.c047f68d.css",
+    "static/js/main.4e420724.js"
   ]
 }
