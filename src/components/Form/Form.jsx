@@ -4,6 +4,7 @@ import CustomButton from "./CustomButton";
 import CustomDateInput from "./CustomDateInput";
 import { useSelector, useDispatch } from "react-redux";
 import { setValue } from "../../redux/Slice";
+import { motion } from "framer-motion";
 
 const Form = ({ setIsComplete }) => {
     const [cardNumberError, setCardNumberError] = useState("");
@@ -25,7 +26,7 @@ const Form = ({ setIsComplete }) => {
             cardHolderName &&
             cvc.length === 3
         ) {
-            setIsComplete(true)
+            setIsComplete(true);
         }
     };
 
@@ -66,8 +67,26 @@ const Form = ({ setIsComplete }) => {
         dispatch(setValue(data));
     };
 
+    const formVariants = {
+        initial: {
+            opacity: 0,
+        },
+        animate: {
+            opacity: 1,
+            transition: {
+                delay: 1,
+                duration: 2,
+            },
+        },
+    };
+
     return (
-        <div className="bg-seven flex gap-7 flex-col">
+        <motion.div
+            variants={formVariants}
+            initial="initial"
+            animate="animate"
+            className="bg-seven flex gap-7 flex-col"
+        >
             <div className="flex flex-col gap-4">
                 <CustomInput
                     error=""
@@ -123,7 +142,7 @@ const Form = ({ setIsComplete }) => {
             <div>
                 <CustomButton onClick={handleButtonClick} title="Confirm" />
             </div>
-        </div>
+        </motion.div>
     );
 };
 

@@ -8,7 +8,7 @@ import { useState } from "react";
 const ModileComponent = ({ className }) => {
     return (
         <div className={`${className} relative`}>
-            <img src="images/bg-main-mobile.png" alt="image" />
+            <img src="images/bg-main-mobile.png" alt="bg-Modile" />
             <div className="absolute w-9/12 bottom-10 right-5">
                 <SecondCard />
             </div>
@@ -24,7 +24,7 @@ const DesktopComponent = () => {
         <div className="relative w-4/12">
             <img
                 src="images/bg-main-desktop.png"
-                alt="image"
+                alt="bg-Desktop"
                 className="h-screen w-[400px]"
             />
             <div className="absolute w-[400px] top-[50%] right-[-55%]">

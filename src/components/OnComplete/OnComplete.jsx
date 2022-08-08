@@ -8,7 +8,7 @@ const OnComplete = ({ setIsComplete }) => {
     return (
         <div className="flex flex-col items-center gap-8">
             <div>
-                <img src="images/icon-complete.svg" alt="image" />
+                <img src="images/icon-complete.svg" alt="Check" />
             </div>
             <div className="text-center font-[500] flex flex-col gap-4">
                 <p className="text-four text-[18px]">

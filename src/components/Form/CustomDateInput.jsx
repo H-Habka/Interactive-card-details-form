@@ -1,4 +1,5 @@
 import styles from "./CustomInputStyle.module.css";
+import { motion } from "framer-motion";
 
 const CustomDateInput = ({
     placeholder1,
@@ -13,11 +14,27 @@ const CustomDateInput = ({
     setValue2,
     maxLength,
 }) => {
+    const labelVariants = {
+        whileHover: {
+            scale: 1.1,
+            originX: 0,
+            color: "#000000aa",
+            fontWeight: 900,
+            transition: { type: "spring", stiffness: 300 },
+        },
+    };
     return (
         <label className="w-full relative">
-            <p>{label}</p>
+            <motion.p
+                className="cursor-pointer"
+                variants={labelVariants}
+                whileHover="whileHover"
+            >
+                {label}
+            </motion.p>
             <div className="flex gap-2">
-                <input
+                <motion.input
+                    whileFocus={{ scale: 1.4 }}
                     maxLength={maxLength}
                     className={`w-16  ${
                         error ? "border-three" : "border-gray-300"
@@ -30,7 +47,8 @@ const CustomDateInput = ({
                     onChange={(e) => setValue1({ [name1]: e.target.value })}
                     name={name1}
                 />
-                <input
+                <motion.input
+                    whileFocus={{ scale: 1.2 }}
                     maxLength={maxLength}
                     className={`w-14  ${
                         error ? "border-three" : "border-gray-300"

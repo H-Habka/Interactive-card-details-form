@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./CustomInputStyle.module.css";
+import { motion } from "framer-motion";
 
 const CustomInput = ({
     placeholder,
@@ -14,8 +15,20 @@ const CustomInput = ({
 }) => {
     return (
         <label className="w-full relative">
-            <p>{label}</p>
-            <input
+            <motion.p
+                className="cursor-pointer"
+                whileHover={{
+                    scale: 1.2,
+                    originX: 0,
+                    color: "#000000aa",
+                    fontWeight: 900,
+                }}
+                transition={{ type: "spring", stiffness: 300 }}
+            >
+                {label}
+            </motion.p>
+            <motion.input
+                whileFocus={{ scale: 1.2 }}
                 maxLength={maxLength}
                 name={name}
                 className={`rounded-lg p-2 border ${
